@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dental Clinic Design System — clinical, precise, trustworthy. All HSL. */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;             /* #FFFFFF */
+    --foreground: 213 64% 16%;           /* #0F2942 navy */
+
+    --card: 0 0% 100%;
+    --card-foreground: 213 64% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 64% 16%;
+
+    --primary: 177 84% 34%;              /* #0EA5A0 teal */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 180 56% 94%;            /* #E6F7F7 mint */
+    --secondary-foreground: 213 64% 16%;
+
+    --muted: 210 33% 98%;                /* #F8FAFB light grey */
+    --muted-foreground: 213 30% 35%;
+
+    --accent: 180 56% 94%;
+    --accent-foreground: 213 64% 16%;
+
+    --coral: 0 84% 65%;                  /* #F05A5A */
+    --coral-foreground: 0 0% 100%;
+
+    --navy: 213 64% 16%;
+    --teal: 177 84% 34%;
+    --mint: 180 56% 94%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 25% 90%;
+    --input: 210 25% 90%;
+    --ring: 177 84% 34%;
+
+    --radius: 0.75rem;
+
+    --shadow-card: 0 4px 20px -8px hsl(213 64% 16% / 0.08);
+    --shadow-elevated: 0 10px 40px -12px hsl(213 64% 16% / 0.18);
+    --shadow-teal: 0 8px 30px -10px hsl(177 84% 34% / 0.35);
+  }
+
+  .dark {
+    --background: 213 64% 8%;
+    --foreground: 0 0% 100%;
+    --card: 213 64% 10%;
+    --card-foreground: 0 0% 100%;
+    --primary: 177 84% 44%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 213 40% 18%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 213 40% 14%;
+    --muted-foreground: 210 20% 70%;
+    --border: 213 30% 22%;
+    --input: 213 30% 22%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Manrope', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display { font-family: 'Manrope', system-ui, sans-serif; }
+  .font-body { font-family: 'Inter', system-ui, sans-serif; }
+
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-elevated { box-shadow: var(--shadow-elevated); }
+  .shadow-teal { box-shadow: var(--shadow-teal); }
+
+  .cta-bounce {
+    @apply transition-transform duration-200 hover:-translate-y-[3px];
+  }
+
+  .doctor-card {
+    perspective: 1000px;
+  }
+  .doctor-card-inner {
+    @apply transition-transform duration-500;
+    transform-style: preserve-3d;
+  }
+  .doctor-card:hover .doctor-card-inner {
+    transform: rotateY(2deg) translateY(-4px);
+  }
+}
