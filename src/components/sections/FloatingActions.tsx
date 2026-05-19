@@ -1,19 +1,19 @@
-import { Calendar, MessageCircle } from "lucide-react";
+import { Calendar, Send } from "lucide-react";
 import { TEMPLATE_DATA } from "@/data/template";
-import { formatWhatsAppHref, trackEvent } from "@/lib/tracking";
+import { trackEvent } from "@/lib/tracking";
 
 export function FloatingActions() {
-  const { whatsapp } = TEMPLATE_DATA.contacts;
+  const { telegram } = TEMPLATE_DATA.contacts;
   return (
     <>
       <a
-        href={formatWhatsAppHref(whatsapp)}
+        href={`https://t.me/${telegram}`}
         target="_blank" rel="noopener noreferrer"
-        aria-label="WhatsApp"
-        onClick={() => trackEvent("whatsapp_click", { source: "floating_mobile", value: whatsapp })}
-        className="md:hidden fixed bottom-5 left-5 z-40 w-14 h-14 rounded-full bg-[#25D366] text-background shadow-elevated flex items-center justify-center hover:scale-105 active:scale-95 transition-transform"
+        aria-label="Telegram"
+        onClick={() => trackEvent("telegram_click", { source: "floating_mobile", value: telegram })}
+        className="md:hidden fixed bottom-5 left-5 z-40 w-14 h-14 rounded-full bg-[#2AABEE] text-background shadow-elevated flex items-center justify-center hover:scale-105 active:scale-95 transition-transform"
       >
-        <MessageCircle className="w-6 h-6" />
+        <Send className="w-6 h-6" />
       </a>
       <a
         href="#appointment"

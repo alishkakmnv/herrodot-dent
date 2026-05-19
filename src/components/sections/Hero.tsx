@@ -86,7 +86,7 @@ export function Hero() {
             <Star className="w-6 h-6 fill-current" />
             <div className="leading-tight">
               <div className="font-display font-extrabold text-2xl">{hero.floatingCard}</div>
-              <div className="text-xs opacity-90">Средний рейтинг 4.9 ★</div>
+              <div className="text-xs opacity-90">на основе отзывов пациентов</div>
             </div>
           </motion.div>
         </motion.div>

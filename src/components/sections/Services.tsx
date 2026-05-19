@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import {
-  Stethoscope, Scissors, Crown, AlignCenter, Sparkles, Baby, Activity, Smile, ArrowRight,
+  Stethoscope, Scissors, Crown, AlignCenter, Sparkles, Activity, Smile, Microscope, ScanLine, ArrowRight,
 } from "lucide-react";
 import { TEMPLATE_DATA } from "@/data/template";
 
-const ICONS = { Stethoscope, Scissors, Crown, AlignCenter, Sparkles, Baby, Activity, Smile } as const;
+const ICONS = { Stethoscope, Scissors, Crown, AlignCenter, Sparkles, Activity, Smile, Microscope, ScanLine } as const;
 
 export function Services() {
   return (

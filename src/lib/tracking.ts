@@ -3,8 +3,8 @@
 
 type EventName =
   | "phone_click"
-  | "whatsapp_click"
-  | "instagram_click"
+  | "telegram_click"
+  | "vk_click"
   | "appointment_cta_click"
   | "calculator_cta_click";
 
@@ -35,10 +35,6 @@ export const formatPhoneHref = (raw: string) => {
   return digits.startsWith("+") ? digits : `+${digits}`;
 };
 
-export const formatWhatsAppHref = (raw: string) => {
-  const digits = raw.replace(/[^0-9]/g, "");
-  return `https://wa.me/${digits}`;
-};
 
 declare global {
   interface Window {
